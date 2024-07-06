@@ -17,10 +17,10 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
       io.emit('user-disconnected', socket.id);
     });
-  console.log('New user connected');
+  console.log('New user connected', socket.id);
 })
 
-app.get('/', (req, res) => {
+app.get('/loc', (req, res) => {
   res.render('index');
 })
 const PORT=process.env.PORT || 3000;
