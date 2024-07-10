@@ -20,7 +20,7 @@ io.on('connection', (socket) => {
   console.log('New user connected', socket.id);
 })
 
-app.get('/loc', (req, res) => {
+app.get('/', (req, res) => {
   res.render('index');
 })
 const PORT=process.env.PORT || 3000;
